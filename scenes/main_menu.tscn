@@ -1,0 +1,134 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg585bvbekllp"]
+
+[ext_resource type="Texture2D" uid="uid://btyu1wrngb38g" path="res://icon.svg" id="1_00ubt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8tf7q"]
+bg_color = Color(0.919708, 0, 0.22642, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.266667)
+shadow_size = 5
+shadow_offset = Vector2(1.205, 1.69)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbw81"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.32549)
+shadow_size = 3
+shadow_offset = Vector2(2, 2)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 16.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 1102.0
+offset_bottom = 683.0
+
+[node name="PlayerInfo" type="Panel" parent="Control"]
+layout_mode = 1
+offset_right = 330.0
+offset_bottom = 96.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8tf7q")
+
+[node name="Panel" type="Panel" parent="Control/PlayerInfo"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -34.5
+offset_right = 83.0
+offset_bottom = 35.5
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jbw81")
+
+[node name="TextureRect" type="TextureRect" parent="Control/PlayerInfo/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.5
+offset_top = -26.5
+offset_right = 26.5
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_00ubt")
+expand_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/PlayerInfo"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 17.0
+offset_right = 149.0
+offset_bottom = 57.0
+text = "Hello"
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/PlayerInfo"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 50.0
+offset_right = 294.0
+offset_bottom = 77.0
+
+[node name="PlayerInfo2" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -245.0
+offset_top = 3.0
+offset_right = 11.0
+offset_bottom = 79.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8tf7q")
+
+[node name="Panel" type="Panel" parent="Control/PlayerInfo2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -27.0
+offset_right = 64.0
+offset_bottom = 27.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jbw81")
+
+[node name="TextureRect" type="TextureRect" parent="Control/PlayerInfo2/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -22.0
+offset_right = 22.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_00ubt")
+expand_mode = 2

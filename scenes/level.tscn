@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b645nds1nqycs"]
+
+[ext_resource type="PackedScene" uid="uid://cod4bgfxx2srp" path="res://scenes/Player.tscn" id="1_vatwj"]
+[ext_resource type="PackedScene" uid="uid://dqimtvdq6drh0" path="res://scenes/obstacle.tscn" id="2_cj0nt"]
+[ext_resource type="PackedScene" uid="uid://dg585bvbekllp" path="res://scenes/main_menu.tscn" id="3_bkdmd"]
+
+[node name="Level" type="Node2D"]
+position = Vector2(1, 0)
+
+[node name="Player" parent="." instance=ExtResource("1_vatwj")]
+position = Vector2(427, 266)
+
+[node name="obstacle" parent="." instance=ExtResource("2_cj0nt")]
+position = Vector2(686, 167)
+
+[node name="MainMenu" parent="." instance=ExtResource("3_bkdmd")]
